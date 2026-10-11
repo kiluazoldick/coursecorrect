@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="accueil"
-      className="pt-[132px] pb-[84px] bg-[radial-gradient(rgba(20,18,25,0.07)_1px,transparent_1px)] bg-[length:24px_24px] dark:bg-[radial-gradient(rgba(255,255,255,0.05)_1px,transparent_1px)]"
+      className="pt-[116px] pb-16 sm:pt-[132px] sm:pb-[84px] bg-[radial-gradient(rgba(20,18,25,0.07)_1px,transparent_1px)] bg-[length:24px_24px] dark:bg-[radial-gradient(rgba(255,255,255,0.05)_1px,transparent_1px)]"
     >
       <div className="w-full max-w-[1140px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-[64px] items-center">
         {/* Colonne gauche */}
