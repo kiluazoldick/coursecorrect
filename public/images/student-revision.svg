@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none">
+  <!-- Fond chaud -->
+  <rect width="400" height="320" fill="#f6f3ec"/>
+
+  <!-- Ombre au sol -->
+  <ellipse cx="200" cy="290" rx="160" ry="12" fill="#141219" opacity="0.08"/>
+
+  <!-- Bureau -->
+  <rect x="20" y="240" width="360" height="14" rx="3" fill="#d6cfc0"/>
+  <rect x="20" y="254" width="360" height="30" fill="#e6e1d6"/>
+
+  <!-- Tasse de café -->
+  <g transform="translate(70 168)">
+    <ellipse cx="52" cy="60" rx="42" ry="8" fill="#141219" opacity="0.08"/>
+    <path d="M 10 10 L 94 10 L 88 58 Q 52 68 16 58 Z" fill="#ffffff" stroke="#d6cfc0" stroke-width="1.5"/>
+    <ellipse cx="52" cy="10" rx="42" ry="9" fill="#320094"/>
+    <ellipse cx="52" cy="10" rx="34" ry="6" fill="#4a1cb8"/>
+    <!-- Anse -->
+    <path d="M 94 22 Q 112 22 112 34 Q 112 46 94 46" fill="none" stroke="#d6cfc0" stroke-width="2.5"/>
+    <!-- Vapeur -->
+    <path d="M 40 -4 Q 44 -12 40 -20" stroke="#d6cfc0" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M 52 -6 Q 56 -14 52 -22" stroke="#d6cfc0" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M 64 -4 Q 68 -12 64 -20" stroke="#d6cfc0" stroke-width="2" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Téléphone avec app -->
+  <g transform="translate(190 130)">
+    <rect x="0" y="0" width="90" height="140" rx="14" fill="#141219"/>
+    <rect x="4" y="4" width="82" height="132" rx="11" fill="#ffffff"/>
+    <!-- Notch -->
+    <rect x="35" y="6" width="20" height="4" rx="2" fill="#141219"/>
+    <!-- En-tête app (violet) -->
+    <rect x="4" y="14" width="82" height="22" rx="0" fill="#7e55ff"/>
+    <rect x="12" y="22" width="40" height="6" rx="2" fill="#ffffff" opacity="0.9"/>
+    <!-- Contenu : cartes cours -->
+    <rect x="12" y="46" width="70" height="22" rx="4" fill="#f6f3ec"/>
+    <rect x="16" y="52" width="40" height="4" rx="1" fill="#6b6675"/>
+    <rect x="16" y="60" width="26" height="3" rx="1" fill="#9a95a3"/>
+
+    <rect x="12" y="74" width="70" height="22" rx="4" fill="#f6f3ec"/>
+    <rect x="16" y="80" width="34" height="4" rx="1" fill="#6b6675"/>
+    <rect x="16" y="88" width="30" height="3" rx="1" fill="#9a95a3"/>
+
+    <rect x="12" y="102" width="70" height="22" rx="4" fill="#f6f3ec"/>
+    <rect x="16" y="108" width="44" height="4" rx="1" fill="#6b6675"/>
+    <!-- Petite coche verte sur la dernière carte -->
+    <circle cx="72" cy="114" r="6" fill="#3fcc3b"/>
+    <path d="M 69 114 L 71 116 L 75 112" stroke="#ffffff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Plante en pot -->
+  <g transform="translate(310 168)">
+    <ellipse cx="30" cy="88" rx="35" ry="6" fill="#141219" opacity="0.08"/>
+    <!-- Pot -->
+    <path d="M 8 50 L 52 50 L 46 86 L 14 86 Z" fill="#8a5b3a"/>
+    <rect x="4" y="44" width="52" height="8" rx="3" fill="#a06d45"/>
+    <!-- Feuilles -->
+    <path d="M 30 44 Q 10 20 14 4 Q 30 10 30 44 Z" fill="#3fcc3b"/>
+    <path d="M 30 44 Q 52 20 48 4 Q 32 10 30 44 Z" fill="#2f9e2c"/>
+    <path d="M 30 44 Q 30 18 30 2 Q 22 22 30 44 Z" fill="#4ed84a"/>
+  </g>
+
+  <!-- Petites annotations manuscrites -->
+  <text x="20" y="300" font-family="Caveat, cursive" font-size="20" fill="#320094" opacity="0.7">pause café ☕</text>
+</svg>
