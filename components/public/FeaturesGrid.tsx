@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/Card";
+import { Reveal } from "@/components/ui/Reveal";
 
 type Feature = {
   title: string;
@@ -144,7 +145,7 @@ export function FeaturesGrid() {
       className="py-24 border-t border-[#e6e1d6] dark:border-[#2c2836] bg-[#f6f3ec] dark:bg-[#1c1926]"
     >
       <div className="w-full max-w-[1140px] mx-auto px-6">
-        <div className="max-w-[660px] mx-auto text-center mb-14">
+        <Reveal className="max-w-[660px] mx-auto text-center mb-14">
           <span className="inline-flex items-center gap-[11px] text-[12px] font-semibold tracking-[0.18em] uppercase text-[#6b6675] dark:text-[#a49db4] mb-[18px] before:content-[''] before:w-6 before:h-[1px] before:bg-[#d6cfc0] dark:before:bg-[#3a3546]">
             Fonctionnalités
           </span>
@@ -155,13 +156,14 @@ export function FeaturesGrid() {
             Six outils simples, qui s&apos;enchaînent sans que tu aies à
             t&apos;organiser toi-même.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.map((feature) => (
-            <Card key={feature.title} className="group">
+          {features.map((feature, index) => (
+            <Reveal key={feature.title} delay={Math.min(index * 60, 360)}>
+              <Card className="group h-full">
               <div
-                className={`w-[46px] h-[46px] rounded-[11px] flex items-center justify-center mb-5 ${tileClasses[feature.tile]}`}
+                className={`w-[46px] h-[46px] rounded-[11px] flex items-center justify-center mb-5 transition-transform duration-200 group-hover:scale-[1.12] group-hover:-rotate-6 motion-reduce:transition-none ${tileClasses[feature.tile]}`}
                 aria-hidden="true"
               >
                 <div className="w-[22px] h-[22px] [&>svg]:w-full [&>svg]:h-full">
@@ -177,7 +179,8 @@ export function FeaturesGrid() {
               <span className="block mt-4 pt-[14px] border-t border-[#e6e1d6] dark:border-[#2c2836] text-[12.5px] tracking-[0.06em] uppercase text-[#9a95a3] dark:text-[#7a7488]">
                 {feature.note}
               </span>
-            </Card>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </div>
