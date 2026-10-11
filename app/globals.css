@@ -2,12 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+:root {
+  --violet: #7e55ff;
+  --violet-hover: #5f35e0;
+  --violet-ink: #320094;
+  --green: #3fcc3b;
+  --ink: #141219;
+  --ink-2: #413d4a;
+  --ink-3: #6b6675;
+  --ink-4: #9a95a3;
+  --paper: #ffffff;
+  --paper-warm: #f6f3ec;
+  --line: #e6e1d6;
+  --line-strong: #d6cfc0;
 }
 
-* {
+html.dark {
+  --violet: #9d80ff;
+  --violet-hover: #8a63ff;
+  --violet-ink: #3b1fa0;
+  --green: #4ed84a;
+  --ink: #f3f0e9;
+  --ink-2: #cdc7d8;
+  --ink-3: #a49db4;
+  --ink-4: #7a7488;
+  --paper: #15131c;
+  --paper-warm: #1c1926;
+  --line: #2c2836;
+  --line-strong: #3a3546;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  max-width: 100vw;
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-family: var(--font-fraunces), Fraunces, Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--violet) 28%, transparent);
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--violet);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    line-height: 1.58;
+  }
+}
+
+@layer utilities {
+  .font-editorial {
+    font-family: var(--font-fraunces), Fraunces, Georgia, serif;
+  }
+
+  .font-handwritten {
+    font-family: var(--font-caveat), Caveat, cursive;
+  }
+}
+
+/* Keep native form controls legible in both themes. */
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
